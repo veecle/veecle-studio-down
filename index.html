@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Studio is offline</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #fafafa;
+        --fg: #1a1a1a;
+        --muted: #555;
+        --accent: #4f46e5;
+        --card-bg: #ffffff;
+        --border: rgba(0, 0, 0, 0.08);
+        --shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0e0f13;
+          --fg: #f1f1f3;
+          --muted: #a3a3ad;
+          --accent: #8b85ff;
+          --card-bg: #16181f;
+          --border: rgba(255, 255, 255, 0.08);
+          --shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1.25rem;
+        background-image:
+          radial-gradient(circle at 20% 10%, rgba(79, 70, 229, 0.08), transparent 40%),
+          radial-gradient(circle at 80% 90%, rgba(79, 70, 229, 0.06), transparent 40%);
+      }
+
+      main {
+        max-width: 620px;
+        width: 100%;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 2.5rem;
+        box-shadow: var(--shadow);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 1.25rem;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+
+      h1 {
+        font-size: clamp(1.6rem, 4vw, 2.1rem);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin: 0 0 1.5rem;
+      }
+
+      p {
+        margin: 0 0 1.1rem;
+        color: var(--fg);
+      }
+
+      p.muted {
+        color: var(--muted);
+      }
+
+      .sign-off {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        font-weight: 500;
+        color: var(--muted);
+      }
+
+      @media (max-width: 480px) {
+        main { padding: 1.75rem 1.5rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="badge">
+        <span class="dot"></span>
+        <span>Studio offline</span>
+      </div>
+
+      <h1>Veecle Studio is offline.</h1>
+
+      <p>
+        We are amazed by the feedback from our early beta users and encouraged
+        to see that they recognize the value of a centralized embedded
+        development platform.
+      </p>
+
+      <p>
+        We took your feedback seriously and noticed a clear pattern: users do
+        not want to replace their existing local setups that are already
+        working well. As a result, we decided to bring Veecle Studio back in
+        a different form &mdash; stay tuned for more.
+      </p>
+
+      <p class="sign-off">&mdash; The Veecle Team</p>
+    </main>
+  </body>
+</html>
